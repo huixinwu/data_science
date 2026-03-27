@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block title %}My blog{% endblock %}
+
+{% block msg %}student's full name blog{% endblock %}
+
+{% block content %}
+<h2 class="subtitle">All Blogs</h2>
+
+{% for blog in blogs %}
+<div class="separators">
+    <h3>{{ blog[2] }}</h3>
+    <p><strong>By:</strong> {{ blog[1] }}</p>
+    <p>{{ blog[3] }}</p>
+    <p><em>Posted on: {{ blog[4] }}</em></p>
+</div>
+{% endfor %}
+
+{% endblock %}
